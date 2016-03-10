@@ -104,6 +104,32 @@ function playToFive() \{\
 \
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.\
     /* YOUR CODE HERE */\
-    return [playerWins, computerWins];\
-\}\
-}
+    while (playerWins <5 && computerWins < 5)\{   \
+ +        var winner = getWinner(getPlayerMove(), getComputerMove());\
+ +    \
+ +        if (winner == "player") \{\
+ +        playerWins++;\
+ +        console.log([playerWins, computerWins]);\
+ +        \}\
+ +        else if (winner == "computer") \{\
+ +        computerWins++;\
+ +        console.log([playerWins, computerWins]);\
+ +        \}\
+ +        else \{\
+ +        console.log("No change in score.");\
+ +        \}\
+ +\
+ +   \}\
+ +    if (playerWins == 5) \{\
+ +        console.log("Player wins overall!");\
+ +    \} \
+ +    else \{\
+ +        console.log("Computer wins overall!");\
+ +    \}\
+ +\
+      return [playerWins, computerWins];              \
+ \}\
+          \
+ +\
+ +\
+ +playToFive();}
